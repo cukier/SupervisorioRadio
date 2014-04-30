@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="21"
+   name=""
+   committed-date="2006-10-22T14:33:31.120323Z"
+   url="https://svn.sourceforge.net/svnroot/jeasyopc/JEasyOpc/doc/model"
+   last-author="arnal2"
+   kind="dir"
+   uuid="1b9a7a96-4b1e-0410-9bcb-890ecea9c50a"
+   repos="https://svn.sourceforge.net/svnroot/jeasyopc"
+   revision="24"/>
+<entry
+   committed-rev="37"
+   name="JEasyOpc.eap"
+   text-time="2006-11-22T18:14:44.281250Z"
+   committed-date="2006-11-27T19:12:50.671622Z"
+   checksum="b5c91bbecbe344278cf7d6199c269e37"
+   last-author="arnal2"
+   kind="file"
+   prop-time="2006-11-27T19:11:15.281250Z"
+   revision="37"/>
+<entry
+   name="model-iter1.mdzip"
+   kind="file"
+   deleted="true"
+   revision="37"/>
+<entry
+   name="JEasyOpc-1st-iter.png"
+   kind="file"
+   deleted="true"
+   revision="37"/>
+</wc-entries>

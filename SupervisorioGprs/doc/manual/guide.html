@@ -1,0 +1,526 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Users Guide : JEasyOpc project</title>
+  <style type="text/css" media="all">
+    @import url("./style/maven-base.css");
+    @import url("./style/maven-theme.css");
+    @import url("./style/project.css");
+  </style>
+  <link rel="stylesheet" href="./style/print.css" type="text/css" media="print"></link>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"></meta>
+  <meta name="email" content="arnal2@seznam.cz"></meta>
+</head>
+<body class="composite">
+
+<div id="banner">
+  <a href="http://www.opcfoundation.org" id="organizationLogo">
+    <img alt="OPC Foundation" src="images/OPCLogo171x64.GIF"></img>
+  </a>
+  <a href="http://www.sourceforge.net/projects/jeasyopc" id="projectLogo">
+    <img alt="JEasyOpc project" src="./images/logo.png"></img>
+  </a>
+  <div class="clear"><hr></hr></div>
+</div>
+
+<div id="breadcrumbs">
+  <div class="xleft">Last published: 01 Dec 2006
+    <span class="separator">|</span> Doc for  2.3.0
+  </div>
+  <div class="xright">
+    <a href="http://www.sourceforge.net/projects/jeasyopc" class="externalLink" title="External Link">JEasyOpc project</a>
+  </div>
+  <div class="clear">
+    <hr></hr>
+  </div>
+</div>
+
+<div id="bodyColumn">
+<div class="contentBox">
+
+<div class="section">
+<a name="Contents"></a><h2>Contents</h2>
+        <p>
+            <ol>
+                <li><a href="#Introduction">Introduction</a></li>
+                <li><a href="#Quick_Start">Quick Start</a>
+                    <ol>
+                        <li><a href="#Configuration">Configuration</a></li>
+                        <li><a href="#FirstLaunch">First launch</a></li>
+                    </ol>
+                </li>
+                <li><a href="#Architecture">Architecture</a>
+                     <ol>
+                        <li><a href="#Components">Components</a></li>
+                        <li><a href="#Exceptions">Exceptions</a></li>
+                        <li><a href="#OpcItemAndOpcGroup">OPC Items and Groups</a></li>
+                        <li><a href="#Variant">Variant type</a></li>
+                     </ol>
+                </li>
+                <li><a href="#Logging">Logging system</a>
+                    <ol>
+                        <li><a href="#Configuring_The_Underlying_Logging_System">
+						Configuring The Underlying Logging System</a></li>
+                        <li><a href="#Configuring_Log4J">Configuring Log4J</a></li>
+                    </ol>
+                </li>
+                <li><a href="#UsageLibrary">Usage of JEasyOpc library</a></li>
+            </ol>
+        </p>
+    </div>
+<div class="section"><a name="Introduction"></a><h2>Introduction</h2>
+<p>
+The JEasyOpc project provides a <a href="http://www.opcfoundation.org" class="externalLink" title="External Link">
+<code>OPC</code></a> (OLE for process control) communication. 
+<p>
+OPC is open connectivity in industrial automation and the enterprise systems
+that support the industry. Interoperability is assured through the creation and
+maintenance of non-proprietary open standards specifications.
+<p>
+The first OPC standard specification resulted from the collaboration of
+a number of leading worldwide automation suppliers working in cooperation
+with Microsoft. Originally based on Microsoft's OLE COM and DCOM technologies,
+the specification defined a standard set of objects, interfaces and methods
+for use in process control and manufacturing automation applications to facilitate
+interoperability.
+<p>
+The COM/DCOM technologies provided the framework for software products to be developed.
+There are now hundreds of OPC Data Access servers and clients. The JEasyOpc project wants to
+provide this technology for everyone with easy way.
+<p> 
+The JEasyOpc project provides OPC for Java technology. The project is based on JDK 1.5 (or higher) and
+a Delphi (2005) native code (<code>JCustomOpc.dll</code> library). The application uses 
+32-bit MS Windows (95/98/NT/2000/XP). The operating system Linux isn't supported.
+</div>
+
+<div class="section"><a name="Quick_Start"></a><h2>Quick Start</h2>
+
+<div class="subsection"><a name="Configuration"></a><h3>Configuration</h3>
+<p>
+The JEasyOpc project is established on <code>LGPL</code> (GNU Library or Lesser General Public License). The project
+can be downloaded from <a href="http://www.sourceforge.net/projects/jeasyopc" class="externalLink" title="External Link">
+SourceForge.net</a> as actual release (2.xx.xx) or night revision from SVN repository. The project is build on
+<a href="http://www.eclipse.org" class="externalLink" title="External Link">Eclipse 3.2.x</a> Open Source IDE. 
+<p>
+The release is distributed as a zip-file for a quick download. In a zip-file, there are these important directories
+and files:
+<div class="source">
+<dl>
+	<dt><code>jeasyopc.jar</code><dd>the final library for usage in your application.<br><br>
+	<dt><code>src.jar</code><dd>the source of library for a preview of library classes.<br><br>
+	<dt><code>eclipse-project\JEasyOpc.zip</code><dd>zip-file with whole JEasyOpc project for Eclipse. There are
+	all examples, JUnit tests, all sources!<br><br>
+	<dt><code>doc</code><dd>the directory includes documentation.<br><br>
+	<dt><code>resources</code><dd>the configuration files of JEasyOpc library. This resources have to be included
+	in CLASSPATH of your project. There are all important information about usage of logging, internationalization
+	and dll-library path (property <code>library.path</code>).
+</dl>
+</div>
+</div>
+
+<div class="subsection"><a name="FirstLaunch"></a><h3>First Launch</h3>
+<p>
+First, the <code>resources</code> directory has to be added to the CLASSPATH of your application. 
+For this example, you have to install <a href="http://www.matrikonopc.com" class="externalLink" title="External Link">
+Matrikon OPC Server</a> on your <code>localhost</code>.
+Now, we can try first small example of JOpc usage.
+<div class="source">
+<pre>
+package javafish.clients.opc;
+
+import javafish.clients.opc.component.OpcGroup;
+import javafish.clients.opc.component.OpcItem;
+import javafish.clients.opc.exception.CoUninitializeException;
+import javafish.clients.opc.exception.ComponentNotFoundException;
+import javafish.clients.opc.exception.ConnectivityException;
+import javafish.clients.opc.exception.SynchReadException;
+import javafish.clients.opc.exception.UnableAddGroupException;
+import javafish.clients.opc.exception.UnableAddItemException;
+import javafish.clients.opc.variant.Variant;
+
+public class SynchReadItemExample {
+  public static void main(String[] args) throws InterruptedException {
+    SynchReadItemExample test = new SynchReadItemExample();
+    
+    JOpc.coInitialize();
+    
+    JOpc jopc = new JOpc("localhost", "Matrikon.OPC.Simulation", "JOPC1");
+
+    OpcItem item1 = new OpcItem("Random.ArrayOfReal8", true, "");
+    OpcGroup group = new OpcGroup("group1", true, 500, 0.0f);
+    
+    group.addItem(item1);
+    jopc.addGroup(group);
+    
+    try {
+      jopc.connect();
+      System.out.println("JOPC client is connected...");
+    }
+    catch (ConnectivityException e2) {
+      e2.printStackTrace();
+    }
+    
+    try {
+      jopc.registerGroups();
+      System.out.println("OPCGroup are registered...");
+    }
+    catch (UnableAddGroupException e2) {
+      e2.printStackTrace();
+    }
+    catch (UnableAddItemException e2) {
+      e2.printStackTrace();
+    }
+    
+    synchronized(test) {
+      test.wait(50);
+    }
+    
+    // Synchronous reading of item
+    int cycles = 7;
+    int acycle = 0;
+    while (acycle++ < cycles) {
+      synchronized(test) {
+        test.wait(1000);
+      }
+      
+      try {
+        OpcItem responseItem = jopc.synchReadItem(group, item1);
+        System.out.println(responseItem);
+        System.out.println(Variant.getVariantName(responseItem.getDataType()) + ": " + responseItem.getValue());
+      }
+      catch (ComponentNotFoundException e1) {
+        e1.printStackTrace();
+      }
+      catch (SynchReadException e) {
+        e.printStackTrace();
+      }
+    }
+    
+    JOpc.coUninitialize();
+  }
+}
+</pre>
+</div>
+</div>
+<p>
+It's a example of synchronous reading of a item, specially <code>Variant array</code>. The OPC communication is based on
+COM+ components (remote access using DCOM). First of all, you have to run <code>coInitialize()</code> method for
+activation of COM processes. Last command for termination of all COM processes, you can use <code>coUninitialize()</code>
+method. This finalization method is called only ONE, it's definitive termination.
+<p>
+The connection to OPC Server is ensured by a <code>connect()</code> method on <code>JCustomOpc</code> java component. 
+The disconnection method doesn't exist. Why? Because COM Server ensures the disconnection process automaticly. If OPC client
+signs off its groups, the OPC Server disconnects connection after short timeout. Note, <code>coUninitialize()</code> method
+releases all COM components and disconnect all connections.
+<p>
+In our example, we use <code>JOpc</code> java component. In our opinion, it is best way for usage of this library.
+This component is intendeded for a inheritance. For example, the <code>JEasyOpc</code> is inherited from this component, and
+extends asynchronous functionality (special thread for Asynch 2.0 control groups). See appropriate examples in the <code>eclipse-project</code>.
+<p>
+<code>JOpc</code> and its descendants are supporting asynchronous and synchronous modes of OPC transmission. For your better
+imagination, we will describe component architecture in the next chapters.
+</div>
+
+<div class="section"><a name="Architecture"></a><h2>Architecture</h2>
+
+<div class="subsection"><a name="Components"></a><h3>Components</h3>
+<p>
+Architecture of java components is shown on figure 1. The ancestor of all OPC components is <code>JCustomOpc</code>.
+This class encapsulates native dll-library and fundamental part of DCOM communication. The OPC Browser <code>JOpcBrowser</code>
+component is directly inherited from <code>JCustomOpc</code>. In other hand, <code>JOpc</code> is inherited from <code>JCustomOpc</code> too,
+but adds all items and groups control, administration processes and communication modes. <code>JOpc</code> is a base class for
+your inheritance. <code>JEasyOpc</code> is example of thread implenentation of asynchronous 2.0 mode. <code>JEasyOpc</code> uses
+asynchronous messaging by <code></A>OpcAsynchGroupListeners</code> (group listeners). In addition, <code>JEasyOpc</code> supports
+Jakarta Common Logging and a multi-language support.
+<p>
+<div id="banner">
+<img alt="Fig.1: Component Architecture" src="images/OpcClient.png"/>
+</div>
+
+<div class="subsection"><a name="Exceptions"></a><h3>Exceptions</h3>
+<p>
+JEasyOpc project exceptions are inherited from <code>OpcException</code> and <code>OpcRuntimeException</code>.
+These exceptions are divided according to common features and usage. The usage of these exceptions is very
+important for correct functionality of your application. In next figures 2., 3. and 4. are shown hierarchic tree
+of these exceptions (<i>NOTE:</i> please click on figure 2. for better image quality).
+<p>
+<div id="banner">
+<a href="images/Exceptions.png">
+<img alt="Fig.2: Hierarchy of OpcException (click for better image quality)" src="images/ExceptionsSmall.png"/>
+</a>
+<p>
+<img alt="Fig.3: Hierarchy of OpcRuntimeEcxeption" src="images/RuntimeExceptions.png"/>
+<p>
+<img alt="Fig.4: Variant exceptions" src="images/VariantExceptions.png"/>
+</div>
+</div>
+
+<div class="subsection"><a name="OpcItemAndOpcGroup"></a><h3>OPC Items and Groups</h3>
+<p>
+<code>JOpc</code> implements support of OPC Groups (class <code>OpcGroup</code>) and OPC Items
+(class <code>OpcItem</code>). OPCDA specifies registration of groups. The groups have to include
+items, only items are impossible without groups. The java architecture is shown on figure 5.
+<p>
+<div id="banner">
+<img alt="Fig.5: OPC Components - OpcGroup and OpcItem" src="images/Component.png"/>
+</div>
+<p>
+The groups with items are flexible structure. The Item constructor is
+<div class="source">
+<pre>
+  /**
+   * Create new instance of OPCItem
+   * 
+   * @param itemName String - specific Tag name of item
+   * @param active boolean - begin activity of item
+   * @param accessPath String - accessPath is the "how" for the server to get the
+   * data specified by the itemName (ItemID, the what). The client uses this function
+   * to identify the possible access paths for the specified ItemID (similary with namespaces).
+   * Not all Opc Serves support these access paths.
+   */
+  public OpcItem(String itemName, boolean active, String accessPath) {
+  }
+</pre>
+</div>
+The group constructor is defined as
+
+<div class="source">
+<pre>
+  /**
+   * Create new instance of OPC Group
+   * 
+   * @param groupName String (user identificatio name of group)
+   * @param active boolean - begin activity of group
+   * @param updateRate double - refresh time of group in milliseconds
+   * @param percentDeadBand float - see percentDeadBand definition:
+   *
+   * Deadband will only apply to items in the group that
+   * have a dwEUType of Analog available. If the dwEUType is Analog,
+   * then the EU Low and EU High values for the item can be used to
+   * calculate the range for the item. This range will be multiplied with
+   * the Deadband to generate an exception limit.
+   * An exception is determined as follows:
+   *
+   * Exception if (absolute value of (last cached value - current value) > pPercentDeadband * (EU High - EU Low) )
+   *
+   * If the exception limit is exceeded, then the last cached value is updated with the new value
+   * and a notification will be sent to the IAdviseSink (if any). The pPercentDeadband is an optional
+   * behavior for the server. If the client does not specify this value on a server that does
+   * support the behavior, the default value of 0 (zero) will be assumed, and all value changes
+   * will update the CACHE. Note that the timestamp will be updated regardless of wether the
+   * cached value is updated.
+   */
+  public OpcGroup(String groupName, boolean active, int updateRate, float percentDeadBand) {
+  }
+</pre>
+</div>
+<p>
+For more information, see JavaDoc of JEasyOpc project <code>./doc/apidocs/index.htm</code>.
+You can see the usage of groups in the next example:
+<div class="source">
+<pre>
+    OpcItem item1 = new OpcItem("Random.Real8", true, "");
+    OpcItem item2 = new OpcItem("Bucket Brigade.ArrayOfReal8", true, "");
+	
+    OpcGroup group = new OpcGroup("group1", true, 500, 0.0f);
+    
+    group.addItem(item1);
+    group.addItem(item2);
+</pre>
+</div>
+<p>
+We created one group with two items. Items have tag-names: <code>Random.Real8</code> and
+<code>Bucket Brigade.ArrayOfReal8</code>. You can obtain names these tags by the help of <code>JOpcBrowser</code>
+component. This component can download appropriate OPC tree structure and get information about tag-items.
+<p>
+These example items have activity of <code>true</code> and haven't any specfic <code>accessPath </code> (default).
+The items are added to the group with user name: "<code>group1</code>". Group has activity on <code>true</code>,
+update ratio is 500 ms and <code>percentDeadBand</code> is 0.0 (float). 
+<p>
+The main attribute is update ratio (<code>updateRate</code>). This attribute determines a refresh of group on a server side.
+For example, if you use synchronous reading with 50 ms, and <code>updateRate</code> was set on 500 ms, it's a wrong, because
+<code>updateRate</code> has to be less than a time-reading. But the overmuch <code>updateRate</code> can load the OPC Server!
+The <code>updateRate</code> has to be configure discreetnes.
+<p>
+In our example, we used item <code>Bucket Brigade.ArrayOfReal8</code> (we use
+<a href="http://www.matrikonopc.com" class="externalLink" title="External Link">Matrikon OPC Server</a> for testing).
+This item is read/write. OPC communication serves two-sided (client cas write data to server). It is not perfect, but
+some reasons exist for this usage. In the last example, we will set our Variant array to the item. This item can be send
+to the server after that.
+<div class="source">
+<pre>
+   // prepare variant list (Double Variant Array = VT_R8)
+   VariantList list = new VariantList(Variant.VT_R8);
+   list.add(new Variant(1.0));
+   list.add(new Variant(2.0));
+   list.add(new Variant(3.0));
+   Variant varin = new Variant(list);
+   
+   // set value to item2
+   item2.setValue(varin);
+</pre>
+</div>
+</div>
+<p>
+<i>NOTE</i>: In asynchronous mode, the group has a register method <code>addAsynchListener(asynchGroupListener)</code>
+for a registration of its groupListeners. The group listener gets actual downloaded a <code>OpcGroup</code>
+(rather a clone of group). The example is shown in <code>JEasyOpcExample.java</code> in JEasyOpc project.
+
+<div class="subsection"><a name="Variant"></a><h3>Variant type</h3>
+<p>
+From version 2.2.0 and higher, the Variant type is supported. The value of item is represented by this variant.
+This java representation of Variant type corresponds with Variant of OLE and COM technologies. Not exactly, but
+it keeps compatibilty many data types. This usage brings advantages and disadvantages of Variant types.
+<p>
+The Variant type can contain a arbitrary data type. For example, we can create variant with double value:
+<div class="source">
+<pre>
+   // preparation of variant (Double Variant = VT_R8)
+   Variant varin = new Variant(1.0);
+   
+   // get information about data type
+   System.out.println(Variant.getVariantName(varin.getVariantType()));
+</pre>
+</div>
+<p>
+It is easy, the variant can save any data type. But which <code>getMethod</code> do you use for appropriate value?
+It is a question. You can use method <code>getVariantType()</code> for detect a correct Variant type. Or you know
+the output type, or you can all types transform to <code>String</code> (with method <code>toString()</code>).
+In our opinion, it is a main problem of variant types. 
+<p>
+The Variant UML structure is shown on figure 6. You can see all variant types and appropriate contructors for
+variant usage (class <code>Variant</code>). The Variant has fully implemented methods:
+<code>equals, hashcode, clone and compareTo</code>.
+<div id="banner">
+ <img alt="Fig.6: Variant" src="images/Variant.png"/>
+</div>
+</div>
+
+<div class="section"><a name="Logging"></a><h2>Logging system</h2>
+<p>
+The logging system is based on
+<a href="http://jakarta.apache.org/commons/logging/"
+class="externalLink" title="External Link">Jakarta Common Logging</a> (JCL).
+JCL provides a <code>Log</code> interface that
+is intended to be both light-weight and an independent abstraction of other logging toolkits.
+It provides the middleware/tooling developer with a simple
+logging abstraction, that allows the user (application developer) to plug in
+a specific logging implementation.
+<p>
+JCL provides thin-wrapper <code>Log</code> implementations for other logging tools, including
+<a href="http://logging.apache.org/log4j/docs/index.html" class="externalLink" title="External Link">Log4J</a>,
+<a href="http://avalon.apache.org/logkit/index.html" class="externalLink" title="External Link">Avalon LogKit</a>
+(the Avalon Framework's logging infrastructure),
+JDK 1.4, and an implementation of JDK 1.4 logging APIs (JSR-47) for pre-1.4 systems.
+The interface maps closely to Log4J and LogKit.
+<p>
+Familiarity with high-level details of the relevant Logging implementations is presumed.
+</div>
+
+<div class="subsection"><a name="Configuring_The_Underlying_Logging_System"></a>
+<h3>Configuring The Underlying Logging System</h3>
+<p>
+JCL provides only a bridge for writing log messages. It does not (and will not) support any
+sort of configuration API for the underlying logging system. 
+<p>
+The Configuration of the behavior of the JCL ultimately depends upon the
+logging toolkit being used. Please consult the documentation for the chosen logging system.
+
+<div class="subsection"><a name="Configuring_Log4J"></a><h3>Configuring Log4J</h3>
+<p>
+Log4J is a very commonly used logging implementation (as well as being the JCL primary default), 
+so a <i>few</i> details are presented herein to get the developer/integrator going.
+Please see the <a href="http://logging.apache.org/log4j/docs/index.html" class="externalLink"
+title="External Link">Log4J Home</a> for more details on Log4J and it's configuration.
+<p>
+Configure Log4J using system properties and/or a properties file:
+</p>
+<ul>
+   <li><strong>log4j.configuration=<em>log4j.properties</em></strong>
+Use this system property to specify the name of a Log4J configuration file.
+If not specified, the default configuration file is <i>log4j.properties</i>.
+   </li>
+   <li><strong>log4j.rootCategory=<i>priority</i> [, <i>appender</i>]*</strong>
+   </li>Set the default (root) logger priority.
+   <li><strong>log4j.logger.<i>logger.name</i>=<i>priority</i></strong>
+Set the priority for the named logger
+and all loggers hierarchically lower than, or below, the
+named logger.
+<i>logger.name</i> corresponds to the parameter of
+<code>LogFactory.getLog(<i>logger.name</i>)</code>,
+used to create the logger instance.  Priorities are:
+<code>DEBUG</code>,
+<code>INFO</code>,
+<code>WARN</code>,
+<code>ERROR</code>,
+or <code>FATAL</code>.
+<br></br>
+Log4J understands hierarchical names,
+enabling control by package or high-level qualifiers:
+<code>log4j.logger.org.apache.component=DEBUG</code>
+will enable debug messages for all classes in both
+<code>org.apache.component</code>and
+<code>org.apache.component.sub</code>.
+Likewise, setting <code>log4j.logger.org.apache.component=DEBUG</code>
+will enable debug message for all 'component' classes,
+but not for other Jakarta projects.
+   </li>
+   <li><strong>log4j.appender.<i>appender</i>.Threshold=<i>priority</i></strong>
+   </li>
+Log4J <i>appenders</i> correspond to different output devices:
+console, files, sockets, and others.
+If appender's <i>threshold</i>
+is less than or equal to the message priority then
+the message is written by that appender.
+This allows different levels of detail to be appear
+at different log destinations.
+For example: one can capture DEBUG (and higher) level information in a logfile,
+while limiting console output to INFO (and higher).
+ </ul>
+ </div>
+ </div>
+</div>
+
+<div class="section"><a name="UsageLibrary"></a><h2>Usage of JEasyOpc library</h2>
+<p>
+Release notes:
+<pre>
+JEasyOpc project release
+------------------------
+Includes
+- Synch read/write opc-items
+- Synch reading of groups
+- Asynch reading opc-groups (1.0 and 2.0)
+- Controls activity and updateTime of groups and items
+- Handles all exceptions from native code
+- Hierarchic exceptions system
+- OPC Browser and OPCEnum components
+- Multilanguages support
+- Logging system: Usage of Jakarta Common Logging + log4j
+- JUnit tests and many examples
+- Example: JEasyOPC -> asynch opc-client implementation
+- OPC Data Types, support of Variant type
+- Support of Variant arrays transmission (read/write)
+- Asynchronous listeners on OPC Group instances
+- User manual
+</pre>
+<p>
+The usage of JEasyOpc library is shown in our examples and JUnit tests in a eclipse-project:
+<ul>
+	<li><code>jeasyopc-2.x.x.zip//eclipse-project/JEasyOpc.zip//src/examples (or /junit)</code>
+	<li><code>https://svn.sourceforge.net/svnroot/jeasyopc/JEasyOpc/src/examples (or /junit)</code>
+</ul>
+</div>
+</div>
+</div>
+ <div class="clear">
+   <hr></hr>
+ </div>
+ <div id="footer">
+ <div class="xright">© 2006, The SourceForge Project</div>
+ <div class="clear">
+  <hr></hr>
+ </div>
+</div>
+</body>
+</html>
