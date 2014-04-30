@@ -22,7 +22,6 @@ public class LaminaSetter extends JDialog implements ActionListener {
 
 	private final JPanel contentPanel;
 	private JComboBox<Float> comboLamina;
-	// private JButton btnSalvar;
 
 	private Float[] laminaArray;
 
@@ -48,8 +47,6 @@ public class LaminaSetter extends JDialog implements ActionListener {
 
 		this.poller = poller;
 
-		// laminaSetores = new int[6];
-
 		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 
 		contentPanel = new JPanel();
@@ -57,9 +54,9 @@ public class LaminaSetter extends JDialog implements ActionListener {
 		setContentPane(contentPanel);
 
 		float passo = 0.5f;
-		laminaArray = new Float[(int) (laminaMinima * 10 / passo) + 1];
+		laminaArray = new Float[20];
 		float lamina = laminaMinima;
-		for (int cont = 0; cont <= (int) (laminaMinima * 10 / passo); cont++, lamina += passo) {
+		for (int cont = 0; cont < laminaArray.length; cont++, lamina += passo) {
 			laminaArray[cont] = lamina;
 		}
 
@@ -73,10 +70,6 @@ public class LaminaSetter extends JDialog implements ActionListener {
 			comboLamina.addActionListener(this);
 			contentPanel.add(comboLamina, "wrap");
 		}
-
-		// btnSalvar = new JButton("Salvar");
-		// btnSalvar.addActionListener(this);
-		// contentPanel.add(btnSalvar, "span 2 1,alignx right");
 
 		pack();
 	}
@@ -101,18 +94,6 @@ public class LaminaSetter extends JDialog implements ActionListener {
 			} catch (InterruptedException e1) {
 				e1.printStackTrace();
 			}
-			// System.out.println(lamina + " : " + index);
-
-			// laminaSetores[Integer.valueOf(cb.getName()) - 1] = (int) (float)
-			// cb
-			// .getSelectedItem();
-
-			// for (int aux : laminaSetores)
-			// System.out.print(aux + " ");
-			// System.out.println("");
-		} else {
-			// poller.setLamina(lamina, setor);
 		}
-
 	}
 }

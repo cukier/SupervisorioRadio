@@ -59,8 +59,6 @@ public class Pizza extends JPanel {
 
 				int tamanho = anguloFinalSetores[cont];
 
-				System.out.println("Arco " + cont + " ai: " + acumulo + " t: "
-						+ tamanho);
 				arco = new Arc2D.Double(aro.getBounds2D(), 90 - acumulo, -1
 						* tamanho, Arc2D.PIE);
 				acumulo += anguloFinalSetores[cont];

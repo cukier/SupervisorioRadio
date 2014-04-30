@@ -113,8 +113,6 @@ public class Pivo {
 						plc.getTempoRestanteHoras(),
 						plc.getTempoRestanteMinutos());
 				System.out.println("Ciclo Atual: " + plc.getCicloAtual());
-				for (int cont : plc.getAnguloSetores())
-					System.out.println("Angulo setor :" + cont);
 
 				frame.updateStatus(plc.getAnguloAtual(), plc.getSentido(),
 						plc.getEstado(), plc.getSetorAtual(),

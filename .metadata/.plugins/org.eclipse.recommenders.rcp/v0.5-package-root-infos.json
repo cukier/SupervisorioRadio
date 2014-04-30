@@ -1,0 +1,592 @@
+[
+  {
+    "symbolicName": "commons-logging-1.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ba24d5de831911b684c92cd289ed5ff826271824",
+    "jarFileModificationDate": "2014-04-22T16:20:04.264-03:00",
+    "location": "D:\\SupervisorioRadio\\SupervisorioGprs\\lib\\commons-logging-1.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e15f5140cfdafc6750e44a3c6786879d28ccbcdb",
+    "jarFileModificationDate": "2014-03-26T09:06:57.666-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\sunmscapi.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5ebef6942e3460e66b64288b8a401e621a73a1fc",
+    "jarFileModificationDate": "2014-03-26T09:06:57.476-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\access-bridge-64.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "forms-1.3.0",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9e6dd51bcd4972aeb8fd67f907d31e6a5c953456",
+    "jarFileModificationDate": "2014-04-22T16:23:14.842-03:00",
+    "location": "D:\\SupervisorioRadio\\SupervisorioRadio\\forms-1.3.0.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c7bd72fcda8739585bc6e9b64040cc06c9cda6a5",
+    "jarFileModificationDate": "2014-03-26T09:06:59.439-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "16c2f22bbf5f8781b37b32ceae582ed3012131d2",
+    "jarFileModificationDate": "2013-10-25T13:45:09.126-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\jfr.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "icones",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b66f0cc19bfcc5128e6549243141ffab80ebbce5",
+    "jarFileModificationDate": "2014-04-22T16:20:04.442-03:00",
+    "location": "D:\\SupervisorioRadio\\SupervisorioGprs\\resources\\icones.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "3bc82c5707e80b282524f41eb633f7abf03b23b6",
+    "jarFileModificationDate": "2014-03-26T09:06:57.626-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\sunec.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6244b3ce6ff7c476eb858120dac955f88430992c",
+    "jarFileModificationDate": "2014-03-26T09:06:58.098-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1f64f2dc349c7b5d45fe7397819be075fe36efaa",
+    "jarFileModificationDate": "2013-10-25T13:45:11.878-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d3ab116e3e0256d86ea15acfd81c3d7394fec12f",
+    "jarFileModificationDate": "2013-10-25T13:45:08.863-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\ext\\access-bridge-32.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8348ffceddde6f58ddebc0e54aa905e25d03abef",
+    "jarFileModificationDate": "2013-10-25T13:45:08.915-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\ext\\jaccess.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a1145f42443b93efb460c444d7e69f02a7e4a9df",
+    "jarFileModificationDate": "2014-03-26T09:06:57.872-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\jfr.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "miglayout15-swing",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "fff96da90b15855f975aa00dc1c827da4edee8fc",
+    "jarFileModificationDate": "2014-04-22T16:20:04.403-03:00",
+    "location": "D:\\SupervisorioRadio\\SupervisorioGprs\\miglayout15-swing.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "36d1d282d74feb2ee8fadf44c737098f150d0084",
+    "jarFileModificationDate": "2013-10-25T13:45:11.577-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4f4081b69df48f293cf72c65d2cbe0108fbd1539",
+    "jarFileModificationDate": "2014-03-26T09:06:57.668-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\sunpkcs11.jar",
+    "javaRuntime": true
+  },
+  {
+    "jarFileModificationDate": "2014-04-30T15:31:33.507-03:00",
+    "location": "D:\\SupervisorioRadio\\Jamod\\src",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e80f93f97615185b20018ea5043daa4a346a6459",
+    "jarFileModificationDate": "2014-03-26T09:07:00.373-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\jfxrt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5e2c12ffab605a78f773e42b2497a9569316346f",
+    "jarFileModificationDate": "2014-03-26T09:06:57.628-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "bbce4cd0f0bff253824d672917a3c2597789bdc0",
+    "jarFileModificationDate": "2014-03-26T09:06:57.670-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\zipfs.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b01a2234d70b3f0783bdccf80141015bf89451f9",
+    "jarFileModificationDate": "2013-10-25T13:45:09.174-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0adf05f10d20aa2ef14988b33150454a7b6232e9",
+    "jarFileModificationDate": "2014-03-26T09:06:57.590-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\nashorn.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "3445e1bd8fd1de2bf4784708818f80b3c8f0c12c",
+    "jarFileModificationDate": "2013-10-25T13:45:08.873-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\ext\\dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "forms-1.3.0",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9e6dd51bcd4972aeb8fd67f907d31e6a5c953456",
+    "jarFileModificationDate": "2014-04-22T16:20:04.231-03:00",
+    "location": "D:\\SupervisorioRadio\\SupervisorioGprs\\forms-1.3.0.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "src",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "695e36fa0d4518c09ee86eb7b44cf002a0e40988",
+    "jarFileModificationDate": "2014-04-22T16:20:04.379-03:00",
+    "location": "D:\\SupervisorioRadio\\SupervisorioGprs\\lib\\src.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b4085004247b082b1d95f3bbf47cee40f03d3f09",
+    "jarFileModificationDate": "2013-10-25T13:45:09.045-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\ext\\sunpkcs11.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "miglayout15-swing",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "fff96da90b15855f975aa00dc1c827da4edee8fc",
+    "jarFileModificationDate": "2014-04-22T16:23:14.848-03:00",
+    "location": "D:\\SupervisorioRadio\\SupervisorioRadio\\miglayout15-swing.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "95dc9053062d68cde4e8c38494cc63aefd7b0a42",
+    "jarFileModificationDate": "2013-10-25T13:45:09.017-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\ext\\sunec.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1af3ac817e2988c21f314faec56d500ee0a28628",
+    "jarFileModificationDate": "2014-03-26T09:07:00.066-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f831655c50b92c41e366442d09511ea84270c45e",
+    "jarFileModificationDate": "2013-10-25T13:45:09.120-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\jce.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2f2aa1d137ca2746c6ae787fa5149c1b71a34864",
+    "jarFileModificationDate": "2014-03-26T09:06:59.995-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "68fe4aa41366486f8816731ca3fbf2686524baa5",
+    "jarFileModificationDate": "2014-03-26T09:06:57.484-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\cldrdata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "35aa93e1c4923ab9d2cfb992e4b3d89c7521abd8",
+    "jarFileModificationDate": "2013-10-25T13:45:11.641-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "miglayout15-swing",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "fff96da90b15855f975aa00dc1c827da4edee8fc",
+    "jarFileModificationDate": "2014-04-22T16:20:04.326-03:00",
+    "location": "D:\\SupervisorioRadio\\SupervisorioGprs\\lib\\miglayout15-swing.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "97e3bcb13f325218fcf9d2286aa7ce6e8c231b7a",
+    "jarFileModificationDate": "2013-10-25T13:45:09.018-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\ext\\sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "brankic1979-icon-set",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "584c8bb700b86de398a17883e8686b7cb1147630",
+    "jarFileModificationDate": "2014-04-15T07:42:01.385-03:00",
+    "location": "D:\\SupervisorioRadio\\IconSet\\Lib\\brankic1979-icon-set.zip",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "comm-2.0",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e1cffe12249ca60d0a6ab6772c632df9942ab417",
+    "jarFileModificationDate": "2014-04-11T09:42:13.072-03:00",
+    "location": "D:\\SupervisorioRadio\\Jamod\\lib\\comm-2.0.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "log4j-1.2.13",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8b1b85d04eea979c33109ea42808b7d3f6d355ab",
+    "jarFileModificationDate": "2014-04-22T16:20:04.324-03:00",
+    "location": "D:\\SupervisorioRadio\\SupervisorioGprs\\lib\\log4j-1.2.13.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0e9fc49aafbb82052439e1ac1e3a99833fdb92b1",
+    "jarFileModificationDate": "2013-10-25T13:45:09.046-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\ext\\zipfs.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f9173a6daa27eba81a68728441f80ad8b49b03bd",
+    "jarFileModificationDate": "2014-03-26T09:06:57.503-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9a1284417f00f1a4c77e67d71a6fbea2eeaf5d7c",
+    "jarFileModificationDate": "2014-03-26T09:06:57.861-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\jce.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a3d1a9689f1c8e36ab64fb669df92076771c42f2",
+    "jarFileModificationDate": "2013-10-25T13:45:09.043-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\ext\\sunmscapi.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "79404db0f2f298d6bff4038fc19d6d5a364c5737",
+    "jarFileModificationDate": "2014-03-26T09:06:59.608-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "87735bf437a37d0efd481fa449c9daf9250a1540",
+    "jarFileModificationDate": "2014-03-26T09:06:57.556-03:00",
+    "location": "C:\\Program Files\\Java\\jre8\\lib\\ext\\jaccess.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ada009645cb2cc623573c4bc1ba00a045e06491d",
+    "jarFileModificationDate": "2013-10-25T13:45:11.913-02:00",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jeasyopc",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c1a0051f06835fcd46e426f9810f9467aee9c216",
+    "jarFileModificationDate": "2014-04-22T16:20:04.320-03:00",
+    "location": "D:\\SupervisorioRadio\\SupervisorioGprs\\lib\\jeasyopc.jar",
+    "javaRuntime": false
+  }
+]

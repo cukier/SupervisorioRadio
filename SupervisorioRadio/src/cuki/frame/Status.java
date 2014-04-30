@@ -146,13 +146,14 @@ public class Status extends JFrame {
 		btnSentdido.setText(sentido ? "Avanço" : "Reversão");
 		mostrador.setEstado(estado);
 		switch (estado) {
-		case 0:
+		case 0: //parado
+		case 5: // alarmeSeguraca
 			btnStart.setText("Iniciar Irrigação");
 			btnSentdido.setEnabled(true);
 			btnLamina.setEnabled(true);
 			break;
 		default:
-		case 7:
+		case 7: //irrigando
 			btnStart.setText("Parar Irrigação");
 			btnSentdido.setEnabled(false);
 			btnLamina.setEnabled(false);
