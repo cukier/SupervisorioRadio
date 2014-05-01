@@ -1,10 +1,11 @@
 package cuki.exemple;
 
+import gnu.io.CommPortIdentifier;
+import gnu.io.PortInUseException;
+import gnu.io.SerialPort;
+
 import java.util.Enumeration;
 
-import javax.comm.CommPortIdentifier;
-import javax.comm.PortInUseException;
-import javax.comm.SerialPort;
 
 public class TesteSerialPort {
 

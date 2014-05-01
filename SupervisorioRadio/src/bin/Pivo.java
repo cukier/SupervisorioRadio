@@ -22,8 +22,6 @@ public class Pivo {
 	static public void setConnection(String[] connProperties) {
 		conManager.setParameters(connProperties[0], connProperties[1],
 				connProperties[2], connProperties[3], connProperties[4]);
-		System.out.println(connProperties[0]);
-		System.out.println(connProperties[1]);
 	}
 
 	public static void main(String[] args) {
@@ -48,7 +46,7 @@ public class Pivo {
 		}
 
 		if (ports.length == 0) {
-			System.out.println("Não existe porta serial");
+			System.out.println("Nï¿½o existe porta serial");
 			System.exit(2);
 		} else {
 			for (String aux : ports)
@@ -108,7 +106,7 @@ public class Pivo {
 				System.out.println("Nr Setores: " + plc.getNrSetores());
 				System.out.println("Fase Atual: " + plc.getContaFase());
 				System.out.println("Numero de Fases: " + plc.getNrFases());
-				System.out.println("Lâmina Atual: " + plc.getLaminaAtual());
+				System.out.println("Lï¿½mina Atual: " + plc.getLaminaAtual());
 				System.out.printf("Tempo Restante: %02d:%02d\n",
 						plc.getTempoRestanteHoras(),
 						plc.getTempoRestanteMinutos());

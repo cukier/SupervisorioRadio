@@ -26,8 +26,7 @@ public class SerialMaster {
 		SerialConnection con = new SerialConnection(params);
 
 		if (con.isOpen()) {
-			System.out.println("Porta " + con.getSerialPort()
-					+ " aberta, fechando...");
+			System.out.println("Porta aberta, fechando...");
 			con.close();
 		}
 

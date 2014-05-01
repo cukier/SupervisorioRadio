@@ -1,2 +1,4 @@
+activeuserprofiles=Team;cuki-PC;cuki-srv
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=cuki
+useridperkey=cuki-PC.Local\=cuki;

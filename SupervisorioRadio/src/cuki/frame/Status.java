@@ -41,7 +41,7 @@ public class Status extends JFrame {
 	public Status() {
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("Supervisório Pivô Krebsfer");
+		setTitle("Supervisï¿½rio Pivï¿½ Krebsfer");
 		setBounds(100, 100, 450, 300);
 
 		menuBar = new JMenuBar();
@@ -106,7 +106,8 @@ public class Status extends JFrame {
 		btnSentdido.setEnabled(false);
 		panel.add(btnSentdido);
 
-		btnStart = new JButton("Lendo pivô...");
+		btnStart = new JButton("Lendo pivï¿½...");
+
 		contentPane.add(btnStart, "cell 1 1,grow");
 
 		setConnectionStatus(false);
@@ -124,6 +125,7 @@ public class Status extends JFrame {
 		pizzaPanel.setVisible(isConected);
 		panelAnguloSentido.setVisible(isConected);
 		btnStart.setVisible(isConected);
+		btnStart.setEnabled(!isConected);
 	}
 
 	public void setAction(ActionHandler actionHandler) {
@@ -142,19 +144,19 @@ public class Status extends JFrame {
 			int duracaoH, int duracaoM, int cicloAtual, int[] anguloSetores) {
 
 		pizza.setAnguloAtual(anguloAtual);
-		lblAnguloAtualValor.setText(String.valueOf(anguloAtual) + "°");
-		btnSentdido.setText(sentido ? "Avanço" : "Reversão");
+		lblAnguloAtualValor.setText(String.valueOf(anguloAtual) + "ï¿½");
+		btnSentdido.setText(sentido ? "Avanï¿½o" : "Reversï¿½o");
 		mostrador.setEstado(estado);
 		switch (estado) {
-		case 0: //parado
+		case 0: // parado
 		case 5: // alarmeSeguraca
-			btnStart.setText("Iniciar Irrigação");
+			btnStart.setText("Iniciar Irrigaï¿½ï¿½o");
 			btnSentdido.setEnabled(true);
 			btnLamina.setEnabled(true);
 			break;
 		default:
-		case 7: //irrigando
-			btnStart.setText("Parar Irrigação");
+		case 7: // irrigando
+			btnStart.setText("Parar Irrigaï¿½ï¿½o");
 			btnSentdido.setEnabled(false);
 			btnLamina.setEnabled(false);
 			break;

@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="java.util.Enumeration"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="gnu.io.SerialPortEventListener"/>
+<fullyQualifiedTypeName name="gnu.io.NoSuchPortException"/>
+<fullyQualifiedTypeName name="gnu.io.UnsupportedCommOperationException"/>
+<fullyQualifiedTypeName name="gnu.io.SerialPortEvent"/>
+<fullyQualifiedTypeName name="gnu.io.CommPortIdentifier"/>
+<fullyQualifiedTypeName name="gnu.io.SerialPort"/>
+<fullyQualifiedTypeName name="gnu.io.PortInUseException"/>
+<fullyQualifiedTypeName name="cuki.utils.PortLister"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+</qualifiedTypeNameHistroy>

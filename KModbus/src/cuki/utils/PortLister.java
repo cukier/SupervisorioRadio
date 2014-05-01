@@ -1,9 +1,10 @@
 package cuki.utils;
 
+import gnu.io.CommPortIdentifier;
+
 import java.util.ArrayList;
 import java.util.Enumeration;
 
-import javax.comm.CommPortIdentifier;
 
 public class PortLister {
 
