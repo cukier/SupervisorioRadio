@@ -23,7 +23,6 @@ public class ActionHandler implements ActionListener {
 	private ConnectionModbus conn = null;
 	private DeviceModbus device = null;
 
-	private boolean cmdFechar = false;
 	private PollDevice poller;
 
 	public ActionHandler(Status frame, ConnectionModbus conn,
@@ -50,8 +49,7 @@ public class ActionHandler implements ActionListener {
 		} else if (e.getSource() == frame.connect) {
 
 			try {
-				conn.open();
-				cmdFechar = false;
+				Pivo.open();
 			} catch (Exception e1) {
 				String sentence = "Não é possível conectar "
 						+ conn.getPortName();
@@ -59,7 +57,6 @@ public class ActionHandler implements ActionListener {
 				JOptionPane.showMessageDialog(frame, sentence);
 				conn.close();
 				System.out.println("fechada");
-				cmdFechar = true;
 			}
 
 		} else if (e.getSource() == frame.database) {
@@ -68,10 +65,7 @@ public class ActionHandler implements ActionListener {
 
 		} else if (e.getSource() == frame.disconnect) {
 
-			poller = null;
-			conn.close();
-			cmdFechar = true;
-			frame.setConnectionStatus(false);
+			Pivo.close();
 
 		} else if (e.getSource() == frame.pooling) {
 
@@ -82,6 +76,8 @@ public class ActionHandler implements ActionListener {
 			boolean estado = device.getEstadoIrrigacao();
 			try {
 				poller.setIrrigacao(!estado);
+				while (device.getEstadoIrrigacao() == estado)
+					;
 			} catch (ModbusIOException e1) {
 				e1.printStackTrace();
 			} catch (ModbusSlaveException e1) {
@@ -95,7 +91,9 @@ public class ActionHandler implements ActionListener {
 			boolean velhoSentido = device.getSentido();
 			try {
 				poller.setSentido(!velhoSentido);
-				Pivo.updateFrame();
+				while (device.getSentido() == velhoSentido)
+					;
+				// Pivo.updateFrame();
 			} catch (ModbusIOException e1) {
 				e1.printStackTrace();
 			} catch (ModbusSlaveException e1) {
@@ -118,7 +116,4 @@ public class ActionHandler implements ActionListener {
 		this.poller = poller;
 	}
 
-	public boolean isCmdFechar() {
-		return cmdFechar;
-	}
 }

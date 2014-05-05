@@ -21,16 +21,16 @@ public class Pivo {
 	static DeviceModbus plc = null;
 	static PollDevice poller = null;
 
-	static public void setConnection(String[] connProperties) {
+	public static void setConnection(String[] connProperties) {
 		conManager.setParameters(connProperties[0], connProperties[1],
 				connProperties[2], connProperties[3], connProperties[4]);
 		System.out.println(connProperties[0]);
 		System.out.println(connProperties[1]);
 	}
 
-	static public void updateFrame() throws ModbusIOException,
+	public static void updateFrame() throws ModbusIOException,
 			ModbusSlaveException, ModbusException {
-		poller.poll();
+
 		System.out.println("Angulo Atual: " + plc.getAnguloAtual());
 		System.out.println("Sentido: " + plc.getSentido());
 		System.out.println("Estado: " + plc.getEstado());
@@ -48,6 +48,35 @@ public class Pivo {
 				plc.getContaFase(), plc.getNrFases(), plc.getLaminaAtual(),
 				plc.getTempoRestanteHoras(), plc.getTempoRestanteMinutos(),
 				plc.getCicloAtual(), plc.getAnguloSetores());
+	}
+
+	public static void open() throws Exception {
+
+		conManager.open();
+
+		if (conManager.isDoorOpen()) {
+			System.out.println("Conectado a " + conManager.getPortName()
+					+ " @ " + conManager.getBaudRate() + " : "
+					+ conManager.getDataBits() + conManager.getParity()
+					+ conManager.getStopBits());
+			poller = new PollDevice(plc, conManager.getConection(), 40);
+			System.out.println("Criado poller " + poller.getClass());
+			poller.setDebug(false);
+			frame.setConnectionStatus(true);
+			handler.setPoller(poller);
+			poller.start();
+		}
+
+	}
+
+	public static void close() {
+
+		poller.interrupt();
+		poller = null;
+		conManager.close();
+		frame.setConnectionStatus(false);
+		System.out.println("Conexão Fechada");
+
 	}
 
 	public static void main(String[] args) {
@@ -81,25 +110,7 @@ public class Pivo {
 		frame.setAction(handler);
 		frame.setVisible(true);
 
-		boolean ctrl = true;
 		while (true) {
-			if (ctrl && conManager.isDoorOpen()) {
-				ctrl = false;
-				System.out.println("Conectado a " + conManager.getPortName()
-						+ " @ " + conManager.getBaudRate() + " : "
-						+ conManager.getDataBits() + conManager.getParity()
-						+ conManager.getStopBits());
-				poller = new PollDevice(plc, conManager.getConection(), 40);
-				System.out.println("Criado poller " + poller.getClass());
-				poller.setDebug(false);
-				frame.setConnectionStatus(true);
-				handler.setPoller(poller);
-			} else if (!ctrl && !conManager.isDoorOpen()) {
-				ctrl = true;
-				poller = null;
-				frame.setConnectionStatus(false);
-				System.out.println("Desconectado");
-			}
 
 			if (conManager.isDoorOpen() && poller != null) {
 				try {
@@ -108,7 +119,6 @@ public class Pivo {
 					System.out.println("1");
 					conManager.close();
 					e1.printStackTrace();
-
 				} catch (ModbusSlaveException e1) {
 					System.out.println("2");
 					e1.printStackTrace();
@@ -119,11 +129,12 @@ public class Pivo {
 
 				synchronized (thread) {
 					try {
-						thread.wait(3000);
+						thread.wait(1500);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
 				}
+
 			} else if (!conManager.isDoorOpen()) {
 
 			}
